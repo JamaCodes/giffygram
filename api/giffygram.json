@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "full_name": "Jama Mohamed",
+      "email": "jama@gmail.com",
+      "created_at": 1630516313545
+    },
+    {
+      "id": 2,
+      "full_name": "human two",
+      "email": "humantwo@gmail.com",
+      "created_at": 1630516438486
+    },
+    {
+      "id": 3,
+      "full_name": "third human",
+      "email": "thirdhuman@gmail.com",
+      "created_at": 1630516438486
+    },
+    {
+      "id": 4,
+      "full_name": "human four",
+      "email": "humanfour@gmail.com",
+      "created_at": 1630516313545
+    },
+    {
+      "id": 5,
+      "full_name": "human five",
+      "email": "humanfive@gmail.com",
+      "created_at": 1630516438486
+    },
+    {
+      "id": 6,
+      "full_name": "human six",
+      "email": "humansix@gmail.com",
+      "created_at": 1630516438486
+    },
+    {
+      "full_name": "human seven",
+      "email": "humanseven@gmail.com",
+      "created_at": 1630516438486,
+      "id": 7
+    }
+  ],
+  "Posts": [
+    {
+      "id": 1,
+      "date": 1630520499980,
+      "title": "HTML & CSS",
+      "entry": "We talked about HTML components.",
+      "moodId": 3,
+      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
+      "userID": 1
+    },
+    {
+      "id": 2,
+      "date": 1630520499980,
+      "title": "Big Fauci",
+      "entry": "I tried to have an element.",
+      "moodId": 4,
+      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
+      "userID": 3
+    },
+    {
+      "id": 3,
+      "date": 1485928800000,
+      "title": "Complex Flexbox",
+      "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
+      "moodId": 5,
+      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
+      "userID": 5
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "date": 1630520555765,
+      "title": "Class today",
+      "message": "We talked about HTML components.",
+      "moodId": 5,
+      "senderID": 1,
+      "receiverID": 2
+    },
+    {
+      "id": 2,
+      "date": 1630520492445,
+      "title": "Flexbox sux",
+      "message": "I tried to have an element.",
+      "moodId": 1,
+      "senderID": 3,
+      "receiverID": 4
+    },
+    {
+      "id": 3,
+      "date": 1630520482110,
+      "title": "Complex JS",
+      "message": "I tried javascript. It hurt my brain. I hate Steve.",
+      "moodId": 1,
+      "senderID": 5,
+      "receiverID": 6
+    }
+  ]
+}
