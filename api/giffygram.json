@@ -46,7 +46,7 @@
   "Posts": [
     {
       "id": 1,
-      "date": 1630520499980,
+      "timestamp": 1630520499980,
       "title": "HTML & CSS",
       "entry": "We talked about HTML components.",
       "moodId": 3,
@@ -55,7 +55,7 @@
     },
     {
       "id": 2,
-      "date": 1630520499980,
+      "timestamp": 1630520499980,
       "title": "Big Fauci",
       "entry": "I tried to have an element.",
       "moodId": 4,
@@ -64,18 +64,26 @@
     },
     {
       "id": 3,
-      "date": 1485928800000,
+      "timestamp": 1485928800000,
       "title": "Complex Flexbox",
       "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
       "moodId": 5,
       "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
       "userID": 5
+    },
+    {
+      "title": "I got this shit",
+      "imageURL": "https://media.giphy.com/media/cPYdl6CYelEbi8VPGr/giphy.gif?cid=ecf05e47kzr3p0midk7f54o16f0x4xxutmdo1gs5h9gxqeti&rid=giphy.gif&ct=g",
+      "description": "i got it",
+      "userId": 1,
+      "timestamp": 1631157823083,
+      "id": 4
     }
   ],
   "messages": [
     {
       "id": 1,
-      "date": 1630520555765,
+      "timestamp": 1630520555765,
       "title": "Class today",
       "message": "We talked about HTML components.",
       "moodId": 5,
@@ -84,7 +92,7 @@
     },
     {
       "id": 2,
-      "date": 1630520492445,
+      "timestamp": 1630520492445,
       "title": "Flexbox sux",
       "message": "I tried to have an element.",
       "moodId": 1,
@@ -93,7 +101,7 @@
     },
     {
       "id": 3,
-      "date": 1630520482110,
+      "timestamp": 1630520482110,
       "title": "Complex JS",
       "message": "I tried javascript. It hurt my brain. I hate Steve.",
       "moodId": 1,

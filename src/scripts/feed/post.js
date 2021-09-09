@@ -1,6 +1,6 @@
  export const Posts = (PostsObject) => {
 
-   const dateObj = new Date(PostsObject.date);
+   const dateObj = new Date(PostsObject.timestamp);
    const formattedDate = dateObj.toDateString();
 
     return `
