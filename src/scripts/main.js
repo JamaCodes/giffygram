@@ -3,7 +3,7 @@ import { getPosts, getUsers, usePostCollection } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/footer.js";
-import { PostEntry } from "./feed/postEntry.js";
+import { PostEntry } from "./postEntry.js";
 
 const showPostList = () => {
   //Get a reference to the location on the DOM where the list will display
@@ -57,6 +57,12 @@ applicationElement.addEventListener("click", (editbutton) => {
     console.log("the id is", editbutton.target.id.split("--")[1]);
   }
 });
+applicationElement.addEventListener("click", event => {
+  if (event.target.id === "newPost__cancel") {
+      //clear the input fields
+  }
+});
+
 
 const showFilteredPosts = (year) => {
   //get a copy of the post collection
