@@ -9,7 +9,7 @@ const showPostList = () => {
   //Get a reference to the location on the DOM where the list will display
   const postElement = document.querySelector(".postList");
   getPosts().then((allPosts) => {
-    postElement.innerHTML = PostList(allPosts);
+    postElement.innerHTML = PostList(allPosts.reverse());
   });
 };
 

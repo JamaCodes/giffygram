@@ -105,19 +105,43 @@
     },
     {
       "title": "let's fucking go",
-      "imageURL": "https://giphy.com/clips/hamlet-party-lets-go-friday-feeling-28o3P9CjKyUzJdkPyg",
-      "description": "yuheeearrrrd?",
-      "userId": 1,
-      "timestamp": 1631159398542,
-      "id": 8
-    },
-    {
-      "title": "let's fucking go",
       "imageURL": "https://media.giphy.com/media/jOVUDzQhPh86TXxA40/giphy.gif",
       "description": "yuheeearrrrd?",
       "userId": 1,
       "timestamp": 1631159427487,
       "id": 9
+    },
+    {
+      "title": "get me veggie tips",
+      "imageURL": "https://media.giphy.com/media/jOVUDzQhPh86TXxA40/giphy.gif",
+      "description": "blunts and a bottle",
+      "userId": 1,
+      "timestamp": 1631159752685,
+      "id": 10
+    },
+    {
+      "title": "auto pilot",
+      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
+      "description": "on auto",
+      "userId": 1,
+      "timestamp": 1631159812695,
+      "id": 11
+    },
+    {
+      "title": "jama is a motherfucking boss",
+      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
+      "description": "on auto",
+      "userId": 1,
+      "timestamp": 1631161596587,
+      "id": 12
+    },
+    {
+      "title": "jama is a motherfucking boss",
+      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
+      "description": "on auto",
+      "userId": 1,
+      "timestamp": 1631161764435,
+      "id": 13
     }
   ],
   "messages": [
