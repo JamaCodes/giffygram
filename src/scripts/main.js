@@ -19,6 +19,8 @@ const startGiffyGram = () => {
 
 startGiffyGram();
 
+
+
 const showNavBar = () => {
   //Get a reference to the location on the DOM where the list will display
   const navElement = document.querySelector("nav");
@@ -82,9 +84,13 @@ applicationElement.addEventListener("click", event => {
 
   // be sure to import from the DataManager
       createPost(postObject)
-  }
+      .then(dbResponse => {
+        showPostList()
+      });      
+    }
+  
 });
-
+ 
 
 const showFilteredPosts = (year) => {
   //get a copy of the post collection
@@ -108,3 +114,11 @@ applicationElement.addEventListener("change", (event) => {
     showFilteredPosts(yearAsNumber);
   }
 });
+
+const showPostEntry = () => { 
+  //Get a reference to the location on the DOM where the nav will display
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEntry();
+};
+
+
