@@ -1,6 +1,5 @@
 export const NavBar = () => {
     return `
-        <nav class="navigation">
             <div class="navigation__item navigation__icon">
                 <img src="./images/pb.png" alt="Giffygram icon" />
             </div>
@@ -16,6 +15,6 @@ export const NavBar = () => {
             <div class="navigation__item navigation__logout">
                 <button id="logout" class="fakeLink">Logout</button>
             </div>
-        </nav>
+
     `
 }
