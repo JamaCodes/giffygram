@@ -10,7 +10,8 @@
         </header>
         <img class="post__image" src="${PostsObject.imageURL}" />
         <p>${formattedDate}</p>
-        <div><button id="edit--${PostsObject.id}">Edit</button></div>
-      </section>
+        <button id="delete__${PostsObject.id}">Delete</button>
+        <button id="edit__${PostsObject.id}">Edit</button>
+        </section>
     `
   }
