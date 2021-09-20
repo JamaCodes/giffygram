@@ -34,6 +34,36 @@ export const getPosts = () => {
     })
 }
 
+export const deletePost = postId => {
+    return fetch(`http://localhost:8088/posts/${postId}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        }
+  
+    })
+        .then(response => response.json())
+        .then(getPosts)
+  }
+  
+  export const getSinglePost = (postId) => {
+    return fetch(`http://localhost:8088/Posts/${postId}`)
+      .then(response => response.json())
+  }
+
+  export const updatePost = postObj => {
+    return fetch(`http://localhost:8088/Posts/${postObj.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postObj)
+  
+    })
+        .then(response => response.json())
+        
+  }
+
 
 const loggedInUser = {
 	id: 7,

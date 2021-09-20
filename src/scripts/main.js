@@ -1,9 +1,11 @@
 // Can you explain what is being imported here?
-import { getPosts, getUsers, usePostCollection, createPost } from "./data/DataManager.js";
+import { getPosts, getUsers, usePostCollection, createPost, deletePost, getSinglePost, updatePost } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/footer.js";
 import { PostEntry } from "./postEntry.js";
+import { PostEdit } from "./feed/editPost.js";
+
 
 const showPostList = () => {
   //Get a reference to the location on the DOM where the list will display
@@ -59,6 +61,13 @@ applicationElement.addEventListener("click", (editbutton) => {
     console.log("the id is", editbutton.target.id.split("--")[1]);
   }
 });
+
+applicationElement.addEventListener("click", (cancelbutton) => {
+  if (cancelbutton.target.id.startsWith("cancel")) {
+    console.log("post clicked", editbutton.target.id.split("--"));
+    console.log("the id is", cancelbutton.target.id.split("--")[1]); }
+});
+
 applicationElement.addEventListener("click", event => {
   if (event.target.id === "newPost__cancel") {
       //clear the input fields
@@ -90,6 +99,17 @@ applicationElement.addEventListener("click", event => {
     }
   
 });
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id.startsWith("delete")) {
+    const postId = event.target.id.split("__")[1];
+    deletePost(postId)
+      .then(response => {
+        showPostList();
+      })
+  }
+})
+
  
 
 const showFilteredPosts = (year) => {
@@ -122,3 +142,49 @@ const showPostEntry = () => {
 };
 
 
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id.startsWith("edit")) {
+    const postId = event.target.id.split("__")[1];
+    getSinglePost(postId)
+      .then(response => {
+        showEdit(response);
+      })
+  }
+})
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id === "newPost__cancel"){
+  showpostEntry();}
+  })
+
+
+const showEdit = (postObj) => {
+  const entryElement = document.querySelector(".entryForm");
+  entryElement.innerHTML = PostEdit(postObj);
+}
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id.startsWith("updatePost")) {
+    const postId = event.target.id.split("__")[1];
+    //collect all the details into an object
+    const title = document.querySelector("input[name='postTitle']").value
+    const url = document.querySelector("input[name='postURL']").value
+    const description = document.querySelector("textarea[name='postDescription']").value
+    const timestamp = document.querySelector("input[name='postTime']").value
+    
+    const postObject = {
+      title: title,
+      imageURL: url,
+      description: description,
+      timestamp: parseInt(timestamp),
+      id: parseInt(postId)
+    }
+    
+    updatePost(postObject)
+      .then(response => {
+        showPostList();
+        showpostEntry();
+      })
+  }
+})

@@ -45,103 +45,18 @@
   ],
   "Posts": [
     {
-      "id": 1,
-      "timestamp": 1630520499980,
-      "title": "HTML & CSS",
-      "entry": "We talked about HTML components.",
-      "moodId": 3,
-      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
-      "userID": 1
+      "title": "mondays suck",
+      "imageURL": "https://media.giphy.com/media/26BGAVqzpotuwsMvu/giphy-downsized-large.gif?cid=ecf05e4771ddc4e6dcd14b8165a50e70f50cf8051f3517fa&rid=giphy-downsized-large.gif&ct=g",
+      "description": "issa monday",
+      "timestamp": 1632152187289,
+      "id": 1
     },
     {
-      "id": 2,
-      "timestamp": 1630520499980,
-      "title": "Big Fauci",
-      "entry": "I tried to have an element.",
-      "moodId": 4,
-      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
-      "userID": 3
-    },
-    {
-      "id": 3,
-      "timestamp": 1485928800000,
-      "title": "Complex Flexbox",
-      "entry": "I tried to have an element in my Flexbox layout also be another Flexbox layout. It hurt my brain. I hate Steve.",
-      "moodId": 5,
-      "imageURL": "https://media.giphy.com/media/JmD9mkDmzvXE7nxy7j/giphy.gif?cid=ecf05e47bvtnhbaea2mkfe42mhdyutk5y1a0g520gxzqnrsm&rid=giphy.gif&ct=g",
-      "userID": 5
-    },
-    {
-      "title": "I got this shit",
-      "imageURL": "https://media.giphy.com/media/cPYdl6CYelEbi8VPGr/giphy.gif?cid=ecf05e47kzr3p0midk7f54o16f0x4xxutmdo1gs5h9gxqeti&rid=giphy.gif&ct=g",
-      "description": "i got it",
-      "userId": 1,
-      "timestamp": 1631157823083,
-      "id": 4
-    },
-    {
-      "title": "god son across the belly",
-      "imageURL": "https://media.giphy.com/media/VxTAgJGDUiva8/giphy.gif?cid=ecf05e474p1xbonvql5qjnguhv80kqgs2ivv37w9xsj2xfpz&rid=giphy.gif&ct=g",
-      "description": "the world on my shoulders too heavy",
-      "userId": 1,
-      "timestamp": 1631158445402,
-      "id": 5
-    },
-    {
-      "title": "animals in the field",
-      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
-      "description": "high off life drunk off dark ",
-      "userId": 1,
-      "timestamp": 1631158608691,
-      "id": 6
-    },
-    {
-      "title": "pac was never setup",
-      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
-      "description": "tried to squash",
-      "userId": 1,
-      "timestamp": 1631158685269,
-      "id": 7
-    },
-    {
-      "title": "let's fucking go",
-      "imageURL": "https://media.giphy.com/media/jOVUDzQhPh86TXxA40/giphy.gif",
-      "description": "yuheeearrrrd?",
-      "userId": 1,
-      "timestamp": 1631159427487,
-      "id": 9
-    },
-    {
-      "title": "get me veggie tips",
-      "imageURL": "https://media.giphy.com/media/jOVUDzQhPh86TXxA40/giphy.gif",
-      "description": "blunts and a bottle",
-      "userId": 1,
-      "timestamp": 1631159752685,
-      "id": 10
-    },
-    {
-      "title": "auto pilot",
-      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
-      "description": "on auto",
-      "userId": 1,
-      "timestamp": 1631159812695,
-      "id": 11
-    },
-    {
-      "title": "jama is a motherfucking boss",
-      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
-      "description": "on auto",
-      "userId": 1,
-      "timestamp": 1631161596587,
-      "id": 12
-    },
-    {
-      "title": "jama is a motherfucking boss",
-      "imageURL": "https://media.giphy.com/media/pLd3w3wQBD6V2/giphy.gif?cid=ecf05e47a69glyl6r5ejrjuzc3l95ve2grpjclrbhzp2gxte&rid=giphy.gif&ct=g",
-      "description": "on auto",
-      "userId": 1,
-      "timestamp": 1631161764435,
-      "id": 13
+      "title": "i got it kinda .... actually i got it",
+      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
+      "description": "",
+      "timestamp": 1632165809785,
+      "id": 2
     }
   ],
   "messages": [
