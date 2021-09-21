@@ -1,10 +1,14 @@
 // Can you explain what is being imported here?
-import { getPosts, getUsers, usePostCollection, createPost, deletePost, getSinglePost, updatePost } from "./data/DataManager.js";
+import { getPosts, logoutUser, getUsers, setLoggedInUser, 
+  usePostCollection, createPost, deletePost, 
+  getSinglePost, updatePost,loginUser, registerUser, getLoggedInUser  } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
 import { Footer } from "./nav/footer.js";
 import { PostEntry } from "./postEntry.js";
 import { PostEdit } from "./feed/editPost.js";
+import { LoginForm } from "./auth/LoginForm.js";
+import { RegisterForm } from "./auth/RegistrationForm.js";
 
 
 const showPostList = () => {
@@ -14,21 +18,12 @@ const showPostList = () => {
     postElement.innerHTML = PostList(allPosts.reverse());
   });
 };
-
-const startGiffyGram = () => {
-  showPostList();
-};
-
-startGiffyGram();
-
-
-
 const showNavBar = () => {
   //Get a reference to the location on the DOM where the list will display
   const navElement = document.querySelector("nav");
   navElement.innerHTML = NavBar();
 };
-showNavBar();
+
 
 const showFooter = () => {
   //Get a reference to the location on the DOM where the nav will display
@@ -36,7 +31,7 @@ const showFooter = () => {
   navElement.innerHTML = Footer();
 };
 
-showFooter();
+
 
 const showpostEntry = () => {
   //Get a reference to the location on the DOM where the nav will display
@@ -44,7 +39,48 @@ const showpostEntry = () => {
   bodyElement.innerHTML = PostEntry();
 };
 
-showpostEntry();
+const startGiffyGram = () => {
+  showPostList();
+  showNavBar();
+  showFooter();
+  showpostEntry();
+};
+
+const checkForUser = () => {
+  if (sessionStorage.getItem("user")){
+    setLoggedInUser(JSON.parse(sessionStorage.getItem("user")));
+    startGiffyGram();
+  }else {
+     showLoginRegister();
+  }
+}
+
+
+const showLoginRegister = () => {
+  showNavBar();
+  const entryElement = document.querySelector(".entryForm");
+  //template strings can be used here too
+  entryElement.innerHTML = `${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
+  //make sure the post list is cleared out too
+const postElement = document.querySelector(".postList");
+postElement.innerHTML = "";
+}
+
+checkForUser();
+
+
+
+// const showPostEntry = () => { 
+//   //Get a reference to the location on the DOM where the nav will display
+//   const entryElement = document.querySelector(".entryForm");
+//   entryElement.innerHTML = PostEntry();
+// };
+
+
+
+
+
+
 
 const applicationElement = document.querySelector(".giffygram");
 
@@ -110,6 +146,7 @@ applicationElement.addEventListener("click", event => {
   }
 })
 
+
  
 
 const showFilteredPosts = (year) => {
@@ -135,11 +172,7 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
-const showPostEntry = () => { 
-  //Get a reference to the location on the DOM where the nav will display
-  const entryElement = document.querySelector(".entryForm");
-  entryElement.innerHTML = PostEntry();
-};
+
 
 
 applicationElement.addEventListener("click", event => {
@@ -188,3 +221,58 @@ applicationElement.addEventListener("click", event => {
       })
   }
 })
+
+applicationElement.addEventListener("click", event => {
+  if (event.target.id === "logout") {
+    logoutUser();
+  }
+})
+
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id === "login__submit") {
+    //collect all the details into an object
+    const userObject = {
+      name: document.querySelector("input[name='name']").value,
+      email: document.querySelector("input[name='email']").value
+    }
+    loginUser(userObject)
+    .then(dbUserObj => {
+      if(dbUserObj){
+        sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+        startGiffyGram();
+      }else {
+        //got a false value - no user
+        const entryElement = document.querySelector(".entryForm");
+        entryElement.innerHTML = `<p class="center">That user does not exist. Please try again or register for your free account.</p> ${LoginForm()} <hr/> <hr/> ${RegisterForm()}`;
+      }
+    })
+  }
+})
+
+applicationElement.addEventListener("click", event => {
+  event.preventDefault();
+  if (event.target.id === "register__submit") {
+    //collect all the details into an object
+    const userObject = {
+      name: document.querySelector("input[name='registerName']").value,
+      email: document.querySelector("input[name='registerEmail']").value
+    }
+    registerUser(userObject)
+    .then(dbUserObj => {
+      sessionStorage.setItem("user", JSON.stringify(dbUserObj));
+      startGiffyGram();
+    })
+  }
+})
+
+applicationElement.addEventListener("click", event => {
+  if (event.target.id === "logout") {
+    logoutUser();
+    console.log(getLoggedInUser());
+    sessionStorage.clear();
+    checkForUser();
+  }
+})
+
+
