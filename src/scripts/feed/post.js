@@ -7,6 +7,7 @@
       <section class="post">
         <header>
             <h2 class="post__title">${PostsObject.title}</h2>
+            <h2 class="post__title">${PostsObject.user.name}</h2>
         </header>
         <img class="post__image" src="${PostsObject.imageURL}" />
         <p>${formattedDate}</p>

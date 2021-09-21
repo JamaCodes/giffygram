@@ -48,11 +48,12 @@
       "id": 8
     }
   ],
-  "Posts": [
+  "posts": [
     {
       "title": "mondays suck",
       "imageURL": "https://media.giphy.com/media/26BGAVqzpotuwsMvu/giphy-downsized-large.gif?cid=ecf05e4771ddc4e6dcd14b8165a50e70f50cf8051f3517fa&rid=giphy-downsized-large.gif&ct=g",
       "description": "issa monday",
+      "userId": 1,
       "timestamp": 1632152187289,
       "id": 1
     },
@@ -60,6 +61,7 @@
       "title": "i got it kinda .... actually i got it",
       "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
       "description": "",
+      "userId": 1,
       "timestamp": 1632165809785,
       "id": 2
     },
@@ -70,6 +72,30 @@
       "userId": 1,
       "timestamp": 1632243661370,
       "id": 3
+    },
+    {
+      "title": "yes",
+      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
+      "description": "done",
+      "userId": 1,
+      "timestamp": 1632255375774,
+      "id": 4
+    },
+    {
+      "title": "guess who",
+      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
+      "description": "yessss\n",
+      "userId": 1,
+      "timestamp": 1632255426923,
+      "id": 5
+    },
+    {
+      "title": "asd",
+      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
+      "description": "finally",
+      "userId": 3,
+      "timestamp": 1632256484639,
+      "id": 6
     }
   ],
   "messages": [
