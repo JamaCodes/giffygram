@@ -16,9 +16,9 @@
 
 //change declaration to let
 let loggedInUser = {
-    id: 3,
-    name: "third human",
-    email: "thirdhuman@gmail.com"
+    id: "",
+    name: "",
+    email: "",
   }
   
   export const logoutUser = () => {
@@ -49,16 +49,16 @@ export const getUsers = () => {
     })
 }
 let postCollection = [];
-export const getPosts = () => {
+// export const getPosts = () => {
 
-    return fetch("http://localhost:8088/posts")
-    .then(response => response.json())
-    .then(parsedResponse => {
-        // do something with response here
-        postCollection = parsedResponse
-        return parsedResponse;
-    })
-}
+//     return fetch("http://localhost:8088/posts")
+//     .then(response => response.json())
+//     .then(parsedResponse => {
+//         // do something with response here
+//         postCollection = parsedResponse
+//         return parsedResponse;
+//     })
+// }
 
 export const deletePost = postId => {
     return fetch(`http://localhost:8088/posts/${postId}`, {
@@ -73,12 +73,12 @@ export const deletePost = postId => {
   }
   
   export const getSinglePost = (postId) => {
-    return fetch(`http://localhost:8088/Posts/${postId}`)
+    return fetch(`http://localhost:8088/posts/${postId}`)
       .then(response => response.json())
   }
 
   export const updatePost = postObj => {
-    return fetch(`http://localhost:8088/Posts/${postObj.id}`, {
+    return fetch(`http://localhost:8088/posts/${postObj.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
@@ -108,7 +108,7 @@ export const createPost = postObj => {
     })
         .then(response => response.json())
   }
-  
+  //login fetch user 'if statement = if no user array returns return falser'
   export const loginUser = (userObj) => {
     return fetch(`http://localhost:8088/users?name=${userObj.name}&email=${userObj.email}`)
     .then(response => response.json())
@@ -124,7 +124,7 @@ export const createPost = postObj => {
       }
     })
   }
-
+// registration post
   export const registerUser = (userObj) => {
     return fetch(`http://localhost:8088/users`, {
       method: "POST",
@@ -138,6 +138,19 @@ export const createPost = postObj => {
       setLoggedInUser(parsedUser);
       return getLoggedInUser();
     })
+  }
+  
+//logged in permissions
+
+  export const getPosts = () => {
+    const userId = getLoggedInUser().id
+    return fetch(`http://localhost:8088/posts?_expand=user`)
+      .then(response => response.json())
+      .then(parsedResponse => {
+        console.log("data with user", parsedResponse)
+        postCollection = parsedResponse
+        return parsedResponse;
+      })
   }
   
   
