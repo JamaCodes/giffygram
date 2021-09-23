@@ -58,22 +58,6 @@
       "id": 1
     },
     {
-      "title": "i got it kinda .... actually i got it",
-      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
-      "description": "",
-      "userId": 1,
-      "timestamp": 1632165809785,
-      "id": 2
-    },
-    {
-      "title": "FEELING GOOD FEEELING GREAT",
-      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
-      "description": "i'm the user now",
-      "userId": 1,
-      "timestamp": 1632243661370,
-      "id": 3
-    },
-    {
       "title": "yes",
       "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
       "description": "done",
@@ -82,20 +66,20 @@
       "id": 4
     },
     {
-      "title": "guess who",
-      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
-      "description": "yessss\n",
-      "userId": 1,
-      "timestamp": 1632255426923,
-      "id": 5
-    },
-    {
       "title": "asd",
       "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
       "description": "finally",
       "userId": 3,
       "timestamp": 1632256484639,
       "id": 6
+    },
+    {
+      "title": "111",
+      "imageURL": "https://media.giphy.com/media/eynzaeD4qkorHb0euJ/giphy.gif",
+      "description": "",
+      "userId": 3,
+      "timestamp": 1632257930097,
+      "id": 7
     }
   ],
   "messages": [
@@ -125,6 +109,58 @@
       "moodId": 1,
       "senderID": 5,
       "receiverID": 6
+    }
+  ],
+  "userLikes": [
+    {
+      "postId": 6,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "postId": 7,
+      "userId": 3,
+      "id": 2
+    },
+    {
+      "postId": 7,
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "postId": 1,
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "postId": 6,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "postId": 4,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "postId": 4,
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "postId": 4,
+      "userId": 3,
+      "id": 8
+    },
+    {
+      "postId": 4,
+      "userId": 3,
+      "id": 9
+    },
+    {
+      "postId": 4,
+      "userId": 3,
+      "id": 10
     }
   ]
 }
