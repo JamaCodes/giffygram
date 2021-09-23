@@ -1,6 +1,6 @@
 // Can you explain what is being imported here?
 import { getPosts, logoutUser, getUsers, setLoggedInUser, 
-  usePostCollection, createPost, deletePost, 
+  usePostCollection, createPost, deletePost, postLike , 
   getSinglePost, updatePost,loginUser, registerUser, getLoggedInUser  } from "./data/DataManager.js";
 import { PostList } from "./feed/PostList.js";
 import { NavBar } from "./nav/NavBar.js";
@@ -276,5 +276,20 @@ applicationElement.addEventListener("click", event => {
     checkForUser();
   }
 })
+
+applicationElement.addEventListener("click", event => {
+	event.preventDefault();
+	if (event.target.id.startsWith("like")) {
+	  const likeObject = {
+		 postId: parseInt(event.target.id.split("__")[1]),
+		 userId: getLoggedInUser().id
+	  }
+	  postLike(likeObject)
+		.then(response => {
+		  showPostList();
+		})
+	}
+  })
+
 
 
