@@ -161,6 +161,16 @@
       "postId": 4,
       "userId": 3,
       "id": 10
+    },
+    {
+      "postId": 7,
+      "userId": 3,
+      "id": 11
+    },
+    {
+      "postId": 7,
+      "userId": 3,
+      "id": 12
     }
   ]
 }

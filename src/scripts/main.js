@@ -279,7 +279,8 @@ applicationElement.addEventListener("click", event => {
 
 applicationElement.addEventListener("click", event => {
 	event.preventDefault();
-	if (event.target.id.startsWith("like")) {
+	if (event.target.id.startsWith("like")) 
+  {
 	  const likeObject = {
 		 postId: parseInt(event.target.id.split("__")[1]),
 		 userId: getLoggedInUser().id
@@ -289,6 +290,11 @@ applicationElement.addEventListener("click", event => {
 		  showPostList();
 		})
 	}
+   else (userId === getLoggedInUser().id)
+    {
+      event.target.id("like").disabled = true;
+
+    }
   })
 
 
